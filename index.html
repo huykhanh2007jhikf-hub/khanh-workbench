@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f2eb">
+  <meta name="theme-color" content="#0b0d11">
   <title>Khánh · Personal Workbench</title>
   <style>
     :root{--ink:#242820;--muted:#7c8178;--paper:#f5f2eb;--card:#fffefa;--line:#e9e5db;--green:#405947;--sage:#e8eee6;--peach:#f4e7db;--blue:#e6edf0;--sand:#f2eddc;--shadow:0 14px 38px #353a2f0b}
@@ -18,6 +18,57 @@
     .footer-note{margin-top:18px;text-align:right;color:#a0a198;font-size:10px}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(max-width:1050px){main{padding:24px 27px 38px}.four-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.three-grid{grid-template-columns:1.2fr 1fr}.module.priority{grid-column:span 2}}
     @media(max-width:680px){.shell{grid-template-columns:59px minmax(0,1fr)}.rail{padding-top:18px}.brand{height:36px;width:36px}.rail-button{height:38px;width:38px}main{padding:17px 14px 30px}.topbar{margin-bottom:16px}.soft-pill{display:none}.hero{min-height:188px;padding:24px 20px}.hero h1{font-size:25px}.hero-side{display:none}.cloud{right:16%;top:22px}.entrybar{gap:7px;padding-left:12px}.entrybar button{min-width:70px;font-size:10px}.quick-actions{margin-left:0}.quick-actions button{width:auto;flex:1}.four-grid{gap:9px}.metric{min-height:140px;padding:13px}.three-grid{grid-template-columns:1fr;gap:10px}.module.priority{grid-column:auto}.module{min-height:185px}.quick-entry-grid{grid-template-columns:1fr;gap:9px}.quick-entry{min-height:67px}.section-title{margin-top:20px}}
+    /* F1-inspired pit-wall look: graphite panels, racing red, and track markings. */
+    :root{color-scheme:dark;--ink:#f4f5f7;--muted:#9da3ad;--paper:#0b0d11;--card:#15181e;--line:#2b3038;--green:#e10600;--sage:#271719;--peach:#2a211d;--blue:#1b242b;--sand:#28241c;--shadow:0 16px 42px #0008}
+    body{background:radial-gradient(ellipse at 85% 0%,#241416 0,transparent 38%),var(--paper);color:var(--ink)}
+    .rail{background:#101318;border-right-color:var(--line)}
+    .brand{border-radius:12px;background:var(--green);box-shadow:0 7px 22px #e1060038;position:relative;overflow:hidden}
+    .brand:after{content:"";position:absolute;inset:auto 0 0;height:5px;background:repeating-conic-gradient(#fff 0 25%,#111 0 50%) 0/10px 10px}
+    .rail-group+.rail-group{border-top-color:#373c45}
+    .rail-button{color:#8b929d;border-radius:10px}
+    .rail-button:hover,.rail-button.active{background:#35191b;color:#ff4b45;box-shadow:inset 3px 0 var(--green)}
+    .rail-hint{background:linear-gradient(var(--green),#3a3e46)}
+    main{padding-top:25px}
+    .topbar{border-bottom:1px solid var(--line);padding-bottom:15px}
+    .brandline{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9da3ad}
+    .brandline strong{color:#fff}
+    .soft-pill{background:#321719;color:#ff7772;border:1px solid #6a282a;border-radius:5px;font-weight:700}
+    .avatar{border-radius:9px;background:#e10600;color:#fff}
+    .hero{min-height:210px;border:1px solid #373b44;border-left:5px solid var(--green);border-radius:14px;background:linear-gradient(112deg,#171a20 0%,#111419 63%,#211416 100%);padding:32px 36px;box-shadow:var(--shadow)}
+    .hero:before{width:380px;height:230px;right:2%;top:-120px;background:radial-gradient(ellipse,#e1060029,transparent 70%);filter:blur(5px)}
+    .hero:after{width:190px;height:190px;right:8%;bottom:-120px;border:18px solid #ffffff08;background:transparent;filter:none}
+    .kicker{color:#ff514b;letter-spacing:.22em}
+    .hero h1{font-size:34px;letter-spacing:-.035em}
+    .intro{color:#d2d5da}.tone{color:#a0a6b0}
+    .cloud{right:31%;top:36px;font-size:0;opacity:1}
+    .cloud:after{content:"🏁";font-size:27px;filter:grayscale(.2)}
+    .calm-note{border:1px solid #ffffff18;background:#0d1015b8;color:#d5d7dc;border-radius:8px}
+    .section-title h2{color:#f5f6f8;letter-spacing:.01em}
+    .section-title p{color:#9ca2ac}.section-title small{color:#828995}
+    .entrybar{background:#15181e;border-color:#343943;border-radius:10px;box-shadow:0 8px 22px #0005}
+    .spark{color:#ff514b}.entrybar input{color:var(--ink)}.entrybar input::placeholder{color:#858c97}
+    .entrybar button{background:#e10600;border-radius:7px;box-shadow:0 4px 12px #e1060030}
+    .entrybar button:hover{background:#ff211a}
+    .quick-actions button{background:#15181e;border-color:#343943;color:#b4bac4;border-radius:6px}
+    .quick-actions button:hover{border-color:#b33131;background:#211719;color:#fff}
+    .metric,.module,.quick-entry{background:linear-gradient(160deg,#181b21,#12151a);border-color:#30353e;border-radius:11px;box-shadow:0 8px 22px #0004}
+    .metric{position:relative;overflow:hidden}
+    .metric:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#59616d}
+    .metric:nth-child(1):before{background:#e10600}.metric:nth-child(2):before{background:#f2f4f7}.metric:nth-child(3):before{background:#3aa6c9}.metric:nth-child(4):before{background:#f0b323}
+    .icon,.metric:nth-child(2) .icon,.metric:nth-child(3) .icon,.metric:nth-child(4) .icon{background:#282d35;color:#e7e9ed;border-radius:8px}
+    .metric:nth-child(1) .icon{background:#39191b;color:#ff5d57}
+    .slot-label{color:#a1a7b1;font-weight:700}
+    .field label,.item-label{color:#9da3ad}
+    .field input,.field textarea,.module-name,.module-items input,.entry-copy input{background:#0d1014;border-color:#343943;color:#f0f1f3;border-radius:6px}
+    .field input:focus,.field textarea:focus,.module-name:focus,.module-items input:focus,.entry-copy input:focus{outline:2px solid #e10600;outline-offset:1px}
+    .module.priority{border-color:#5c292b;box-shadow:inset 3px 0 #e10600,0 8px 22px #0004}
+    .module-mark,.module:nth-child(2) .module-mark,.module:nth-child(3) .module-mark{background:#292e36;border-radius:8px}
+    .module.priority .module-mark{background:#39191b}
+    .module-badge{background:#35191b;color:#ff7670;border-radius:5px;font-weight:700}
+    .entry-icon{background:linear-gradient(135deg,#e10600 0 18%,#292e36 18% 36%,#e10600 36% 54%,#292e36 54% 72%,#e10600 72% 90%,#292e36 90%);border-radius:6px}
+    .plus{color:#ff625c}
+    .footer-note{color:#7e8590}
+    @media(max-width:680px){.hero{border-radius:11px;padding:24px 19px}.hero h1{font-size:25px}.cloud{right:14%;top:22px}.topbar{padding-bottom:12px}}
   </style>
 </head>
 <body>
