@@ -69,6 +69,30 @@
     .plus{color:#ff625c}
     .footer-note{color:#7e8590}
     @media(max-width:680px){.hero{border-radius:11px;padding:24px 19px}.hero h1{font-size:25px}.cloud{right:14%;top:22px}.topbar{padding-bottom:12px}}
+    /* Extra F1 cues: timing tower, circuit map, carbon weave, and pit lane striping. */
+    body{background-image:radial-gradient(ellipse at 85% 0%,#3a1416 0,transparent 38%),linear-gradient(90deg,#ffffff04 1px,transparent 1px),linear-gradient(#ffffff04 1px,transparent 1px);background-size:auto,34px 34px,34px 34px;background-color:var(--paper)}
+    .topbar{position:relative}.topbar:after{content:"";position:absolute;right:0;bottom:-1px;width:106px;height:5px;background:repeating-linear-gradient(135deg,#f2f4f7 0 7px,#20242a 7px 14px);opacity:.8}
+    .brandline:before{content:"F1  /  ";color:#ff4a43;font-weight:900;letter-spacing:.16em}
+    .hero{isolation:isolate;background:linear-gradient(112deg,#171a20 0%,#111419 56%,#241416 100%)}
+    .hero:before{z-index:-1;background:radial-gradient(ellipse,#e1060038,transparent 70%)}
+    .hero:after{right:7%;bottom:-118px;width:215px;height:215px;border:16px solid #ffffff08;box-shadow:0 0 0 16px #e1060008,0 0 0 32px #ffffff05}
+    .hero-copy{max-width:650px}.hero-copy:after{content:"";display:block;width:min(390px,80vw);height:4px;margin-top:20px;background:repeating-linear-gradient(90deg,#e10600 0 42px,#f5f6f8 42px 50px,#22262d 50px 58px);clip-path:polygon(0 0,100% 0,97% 100%,0 100%)}
+    .race-panel{width:226px;padding:14px 15px;border:1px solid #454a53;border-radius:10px;background:linear-gradient(145deg,#1d2128eF,#101318f2);box-shadow:0 12px 30px #0008;position:relative;overflow:hidden}
+    .race-panel:after{content:"";position:absolute;right:-20px;bottom:8px;width:100px;height:48px;border:2px solid #e1060055;border-radius:48% 42% 55% 40%;transform:rotate(-22deg);box-shadow:0 0 0 5px #e106000b,0 0 0 10px #ffffff06}
+    .race-panel-top,.race-meta{display:flex;justify-content:space-between;align-items:center;gap:9px}.race-panel-top{font-size:8px;letter-spacing:.16em;color:#aeb4bd;font-weight:800}.live-dot{color:#ff5b55;font-weight:900}.live-dot:before{content:"";display:inline-block;width:6px;height:6px;margin-right:5px;border-radius:50%;background:#e10600;box-shadow:0 0 9px #e10600}
+    .race-number{margin-top:5px;color:#fff;font-size:32px;font-weight:800;letter-spacing:-.06em;line-height:1}.race-number span{color:#78808b;font-size:13px;letter-spacing:0}.race-meta{margin-top:7px;color:#818995;font-size:7px;letter-spacing:.12em}
+    .rpm{display:flex;gap:4px;margin-top:11px}.rpm i{height:5px;flex:1;border-radius:2px;background:#383d46}.rpm i:nth-child(-n+5){background:#e10600;box-shadow:0 0 7px #e1060040}.rpm i:nth-child(n+6):nth-child(-n+7){background:#f0b323}
+    .metric,.module,.quick-entry{background:linear-gradient(145deg,#1b1f26,#111419);position:relative;overflow:hidden}
+    .metric:after{content:"";position:absolute;top:0;right:0;width:44px;height:44px;background:linear-gradient(135deg,transparent 48%,#ffffff0a 49% 57%,transparent 58%);pointer-events:none}
+    .metric:nth-child(1){border-top:2px solid #e10600}.metric:nth-child(2){border-top:2px solid #e6e8ec}.metric:nth-child(3){border-top:2px solid #3aa6c9}.metric:nth-child(4){border-top:2px solid #f0b323}
+    .slot-label{font-family:"Arial Narrow","Segoe UI",sans-serif;letter-spacing:.13em}
+    .module{background-image:linear-gradient(145deg,#1b1f26,#111419),repeating-linear-gradient(135deg,transparent 0 8px,#ffffff04 8px 9px)}
+    .module-mark{position:relative}.module-mark:after{content:"";position:absolute;inset:7px;border:1px solid #ffffff24;border-radius:50%}
+    .module.priority{background:linear-gradient(110deg,#211719,#15181e 55%);border-color:#713033}
+    .module.priority:after{content:"PIT WALL  /  PRIORITY";position:absolute;right:13px;bottom:12px;color:#ffffff24;font-size:7px;letter-spacing:.16em;font-weight:800}
+    .quick-entry{border-left:3px solid #e10600}.quick-entry:nth-child(2){border-left-color:#e7e9ed}.quick-entry:nth-child(3){border-left-color:#3aa6c9}
+    .footer-note{position:relative;padding-top:10px;border-top:1px solid #282d35}
+    @media(max-width:680px){.race-panel{width:190px;padding:11px;margin-top:14px}.hero-side{display:flex;align-items:flex-end}.hero{display:block}.hero-copy:after{margin-top:13px}.race-number{font-size:26px}.hero:after{right:-30px}}
   </style>
 </head>
 <body>
@@ -90,7 +114,7 @@
     </aside>
     <main>
       <header class="topbar"><div class="brandline"><strong>Khánh</strong>　/　Personal workbench</div><div class="top-right"><span class="soft-pill">YOUR SPACE</span><div class="avatar" aria-label="Khánh">K</div></div></header>
-      <section class="hero" aria-labelledby="greeting"><div class="hero-copy"><div class="kicker">PERSONAL WORKBENCH</div><h1 id="greeting">Good evening, Khánh.</h1><p class="intro">I’m a student learning new things and working toward my goals.</p><p class="tone">A calm place to plan the next step.</p></div><span class="cloud" aria-hidden="true">☁</span><div class="hero-side"><div class="calm-note">Take it one step at a time.</div></div></section>
+      <section class="hero" aria-labelledby="greeting"><div class="hero-copy"><div class="kicker">PERSONAL WORKBENCH · RACE WEEKEND</div><h1 id="greeting">Good evening, Khánh.</h1><p class="intro">I’m a student learning new things and working toward my goals.</p><p class="tone">Every lap starts with one focused step.</p></div><span class="cloud" aria-hidden="true">☁</span><div class="hero-side"><div class="race-panel" aria-label="Decorative race telemetry"><div class="race-panel-top"><span>RACE CONTROL</span><span class="live-dot">LIVE</span></div><div class="race-number">01 <span>/ 05</span></div><div class="race-meta"><span>SESSION</span><span>FOCUS LAPS</span></div><div class="rpm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></section>
       <section aria-labelledby="input-heading"><h2 id="input-heading" class="visually-hidden">Quick input</h2><div class="entrybar"><span class="spark" aria-hidden="true">✦</span><input aria-label="Quick input" placeholder="Capture a role detail, workflow step, or deliverable…"><button type="button" aria-label="Submit quick input">＋</button></div><div class="quick-actions" aria-label="Quick input action names"><button aria-label="Define Agent role" data-prompt="Agent role: ">Define role</button><button aria-label="Add workflow step" data-prompt="Workflow step: ">Add workflow step</button><button aria-label="Set delivery standard" data-prompt="Delivery standard: ">Set delivery standard</button></div></section>
       <section aria-labelledby="cards-heading"><div class="section-title"><div><h2 id="cards-heading">Agent build · at a glance</h2><p>Milestones from the shared Feishu guide · actual progress is not specified there.</p></div></div><div class="four-grid">
         <article class="metric"><div class="metric-head"><span class="icon">✦</span><span class="slot-label">STAGE 02</span></div><div class="fields"><div class="field full"><label for="card1name">Name</label><input id="card1name" aria-label="Card 1 name" value="Role & standards"></div><div class="field"><label for="card1today">Today</label><input id="card1today" aria-label="Card 1 today's value" value="Not specified"></div><div class="field"><label for="card1target">Target</label><input id="card1target" aria-label="Card 1 target value" value="Agent role card"></div><div class="field full"><label for="card1sentence">One sentence</label><textarea id="card1sentence" aria-label="Card 1 sentence">Define who the Agent serves, what problem it solves, and what it delivers.</textarea></div></div></article>
